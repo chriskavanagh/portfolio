@@ -9,11 +9,17 @@ const Styleddiv = styled.div`
     margin: 15px;
     padding: 10px;
   }
+
+  h1 {
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+  }
 `;
 
 const Main = props => {
   return (
     <Styleddiv>
+      <h1>Home Page</h1>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad asperiores
         eos necessitatibus, corporis maxime animi! Fuga odio, dicta ex explicabo

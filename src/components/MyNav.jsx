@@ -28,6 +28,18 @@ const Styleddiv = styled.div`
   }
 `;
 
+const StyledLink = styled(NavLink)`
+  padding: 5px 15px 5px 17px;
+  color: #f51963;
+  text-decoration: none;
+  display: block;
+
+  :hover,
+  :active {
+    color: #fa923f;
+  }
+`;
+
 const MyNav = props => {
   return (
     <Styleddiv className="myNav">
@@ -37,9 +49,15 @@ const MyNav = props => {
       <nav>
         <div className="navLinks">
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
+            <li>
+              <StyledLink to="/">Home</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/contact">Contact</StyledLink>
+            </li>
+            <li>
+              <StyledLink to="/about">About</StyledLink>
+            </li>
           </ul>
         </div>
       </nav>
