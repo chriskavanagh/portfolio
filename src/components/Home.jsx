@@ -7,12 +7,15 @@ const Styleddiv = styled.div`
 
   p {
     margin: 15px;
-    padding: 10px;
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 19px;
   }
 
   h1 {
     text-align: center;
     margin: 2rem 0 3rem 0;
+    font-size: 2.5rem;
   }
 `;
 
