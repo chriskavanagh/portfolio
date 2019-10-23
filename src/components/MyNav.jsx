@@ -29,10 +29,11 @@ const Styleddiv = styled.div`
 `;
 
 const StyledLink = styled(NavLink)`
-  padding: 5px 15px 5px 17px;
+  padding: 5px 5px 5px 5px;
   color: #f51963;
   text-decoration: none;
   display: block;
+  font-family: Roboto;
 
   :hover,
   :active {
@@ -50,13 +51,13 @@ const MyNav = props => {
         <div className="navLinks">
           <ul>
             <li>
-              <StyledLink to="/">Home</StyledLink>
+              <StyledLink to="/">HOME</StyledLink>
             </li>
             <li>
-              <StyledLink to="/contact">Contact</StyledLink>
+              <StyledLink to="/contact">CONTACT</StyledLink>
             </li>
             <li>
-              <StyledLink to="/about">About</StyledLink>
+              <StyledLink to="/about">ABOUT</StyledLink>
             </li>
           </ul>
         </div>

@@ -11,7 +11,8 @@ const Styleddiv = styled.div`
 `;
 
 const Styledh1 = styled.h1`
-  font-size: 3rem;
+  font-size: 3.1rem;
+  font-family: Roboto;
 `;
 
 const TopNav = props => {
