@@ -51,13 +51,13 @@ const MyNav = props => {
         <div className="navLinks">
           <ul>
             <li>
-              <StyledLink to="/">HOME</StyledLink>
+              <StyledLink to="/">Home</StyledLink>
             </li>
             <li>
-              <StyledLink to="/contact">CONTACT</StyledLink>
+              <StyledLink to="/contact">Contact</StyledLink>
             </li>
             <li>
-              <StyledLink to="/about">ABOUT</StyledLink>
+              <StyledLink to="/about">About</StyledLink>
             </li>
           </ul>
         </div>

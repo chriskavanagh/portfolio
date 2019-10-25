@@ -4,8 +4,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import TopNav from "./components/TopNav";
 import MyNav from "./components/MyNav";
+
 import { Route, Switch } from "react-router-dom";
-import MyCarousel from "./components/Carousel";
 import "./App.css";
 
 function App() {
@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <TopNav />
       <MyNav />
-      <MyCarousel axis={"horizontal"} dynamicHeight={true} />
-      {/* <Switch>
+
+      <Switch>
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/" component={Home} />
-      </Switch> */}
+      </Switch>
     </div>
   );
 }

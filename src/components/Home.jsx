@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Caro from "./Caro";
 
 const Styleddiv = styled.div`
   display: grid;
@@ -65,6 +66,7 @@ const Styledul = styled.ul`
 const Main = props => {
   return (
     <>
+      <Caro />
       <div>
         <Toph1>Home Page</Toph1>
       </div>
