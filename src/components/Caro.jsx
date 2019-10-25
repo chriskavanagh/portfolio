@@ -34,7 +34,7 @@ const Caro = () => {
         width: "99.1vw",
         height: "79.3vh",
         paddingTop: "2px",
-        paddingBottom: "3px"
+        paddingBottom: "7px"
       }}
     >
       <Gallery
