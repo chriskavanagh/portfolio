@@ -25,6 +25,7 @@ const Styleddiv = styled.div`
   .logo {
     margin-left: 3rem;
     color: #f51963;
+    font-size: 23px;
   }
 `;
 
@@ -34,6 +35,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   display: block;
   font-family: Roboto;
+  font-size: 19px;
 
   :hover,
   :active {

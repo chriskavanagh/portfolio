@@ -3,7 +3,11 @@ import styled from "styled-components";
 import Caro from "./Caro";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faInstagram,
+  faFacebookSquare
+} from "@fortawesome/free-brands-svg-icons";
 
 const Styleddiv = styled.div`
   display: grid;
@@ -73,26 +77,36 @@ const TopDiv = styled.div`
   height: 240px;
   color: #dcdcdc;
   border: 1px solid #f51963;
-  margin: 110px 15% 0 15%;
-  border-radius: 10px;
-  box-shadow: inset 0 0 10px #000000;
+  margin: 110px 15% 10% 15%;
+  border-radius: 12px;
 `;
 
 const AsideDiv = styled.div`
-  margin-top: 8em;
+  margin-top: 1.5em;
+  margin-bottom: 8rem;
   background: #f6f6f6;
   border-radius: 20px;
+  padding: 5px 12px 0 12px;
+  width: 100%;
 
   ul {
     margin-bottom: 2em;
     list-style: none;
     margin: 0 0 2em 0;
+    padding-bottom: 5px;
   }
 
   li {
-    line-height: 1.4;
+    line-height: 1.1;
     font-size: 20px;
     padding: 10px 15px;
+  }
+
+  .bottom__ul {
+    padding-bottom: 20px;
+  }
+  .top__ul {
+    padding-top: 10px;
   }
 `;
 
@@ -194,21 +208,13 @@ const Main = props => {
         </div>
 
         <div>
-          <Styledul>
-            <Styledli>Kollektif Typeface</Styledli>
-            <Styledli>Noelan Script Font</Styledli>
-            <Styledli>Debby Font Family</Styledli>
-            <Styledli>Wreath Font Family</Styledli>
-            <Styledli>Selima Script Font Free</Styledli>
-            <Styledli>Selima Script Font Free</Styledli>
-          </Styledul>
           <AsideDiv>
-            <ul>
+            <ul className="top__ul">
               <li>
                 <Link>Coding, Layouts, CSS, Essentials</Link>
               </li>
             </ul>
-            <ul>
+            <ul className="bottom__ul">
               <li>
                 <FontAwesomeIcon
                   icon={faTwitter}
@@ -221,12 +227,28 @@ const Main = props => {
                 <FontAwesomeIcon
                   icon={faInstagram}
                   style={{ marginRight: "10px" }}
-                  color="#0077b5"
+                  color="orange"
                 />
                 <Link>Share on LinkedIn</Link>
               </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faFacebookSquare}
+                  style={{ marginRight: "10px" }}
+                  color="blue"
+                />
+                <Link>Share on Facebook</Link>
+              </li>
             </ul>
           </AsideDiv>
+          <Styledul>
+            <Styledli>Kollektif Typeface</Styledli>
+            <Styledli>Noelan Script Font</Styledli>
+            <Styledli>Debby Font Family</Styledli>
+            <Styledli>Wreath Font Family</Styledli>
+            <Styledli>Selima Script Font Free</Styledli>
+            <Styledli>Selima Script Font Free</Styledli>
+          </Styledul>
         </div>
       </Styleddiv>
     </>
