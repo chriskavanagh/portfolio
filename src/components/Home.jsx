@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Caro from "./Caro";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Styleddiv = styled.div`
   display: grid;
@@ -45,9 +48,8 @@ const Styleddiv = styled.div`
 
 const Toph1 = styled.h1`
   text-align: center;
-  margin: 4rem 0 6rem 0;
+  font-family: Oxygen;
   font-size: 4rem;
-  font-family: Roboto;
 `;
 
 const Styledli = styled.li`
@@ -63,13 +65,44 @@ const Styledul = styled.ul`
   padding: 0px;
 `;
 
+const TopDiv = styled.div`
+  display: flex;
+  align-items: center;
+  background: gray;
+  justify-content: center;
+  height: 240px;
+  color: #dcdcdc;
+  border: 1px solid #f51963;
+  margin: 110px 15% 0 15%;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px #000000;
+`;
+
+const AsideDiv = styled.div`
+  margin-top: 8em;
+  background: #f6f6f6;
+  border-radius: 20px;
+
+  ul {
+    margin-bottom: 2em;
+    list-style: none;
+    margin: 0 0 2em 0;
+  }
+
+  li {
+    line-height: 1.4;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+`;
+
 const Main = props => {
   return (
     <>
       <Caro />
-      <div>
-        <Toph1>Home Page</Toph1>
-      </div>
+      <TopDiv>
+        <Toph1>Webworx Development</Toph1>
+      </TopDiv>
 
       <Styleddiv>
         <div>
@@ -169,6 +202,31 @@ const Main = props => {
             <Styledli>Selima Script Font Free</Styledli>
             <Styledli>Selima Script Font Free</Styledli>
           </Styledul>
+          <AsideDiv>
+            <ul>
+              <li>
+                <Link>Coding, Layouts, CSS, Essentials</Link>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  style={{ marginRight: "10px" }}
+                  color="dodgerblue"
+                />
+                <Link>Share on Twitter</Link>
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  style={{ marginRight: "10px" }}
+                  color="#0077b5"
+                />
+                <Link>Share on LinkedIn</Link>
+              </li>
+            </ul>
+          </AsideDiv>
         </div>
       </Styleddiv>
     </>

@@ -4,7 +4,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import TopNav from "./components/TopNav";
 import MyNav from "./components/MyNav";
-
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 

@@ -4,11 +4,18 @@ import styled from "styled-components";
 const Styleddiv = styled.div`
   text-align: center;
   margin: 0px auto;
-  max-width: 550px;
+  margin: 5rem auto 3rem auto;
+
+  h1 {
+    font-size: 4rem;
+  }
 
   p {
     padding: 1rem;
     line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 19px;
   }
 
   .first {
@@ -24,10 +31,27 @@ const Styleddiv = styled.div`
     margin-left: -0.2em;
   }
 `;
+
+const TopDiv = styled.div`
+  display: flex;
+  align-items: center;
+  background: gray;
+  justify-content: center;
+  height: 240px;
+  max-width: 55rem;
+  color: #fff8dc;
+  border: 1px solid #f51963;
+  margin: 110px auto 3rem auto;
+  border-radius: 10px;
+`;
+
 const About = props => {
   return (
     <Styleddiv>
-      <h1>About Page!</h1>
+      <TopDiv>
+        <h1>About Us</h1>
+      </TopDiv>
+
       <p>
         <span className="first">L</span>orem ipsum dolor sit amet consectetur
         adipisicing elit. Ipsam, omnis quos? Similique nulla error ratione magni
