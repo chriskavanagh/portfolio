@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Caro from "./Caro";
+// import Caro from "./Caro";
+//import Slideshow from "./Slideshow";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,6 +22,7 @@ const Styleddiv = styled.div`
     line-height: 1.6;
     font-size: 19px;
     max-width: 80%;
+    font-family: "Pacifico", cursive;
   }
 
   .first {
@@ -76,8 +78,8 @@ const TopDiv = styled.div`
   justify-content: center;
   height: 240px;
   color: #dcdcdc;
-  border: 1px solid #f51963;
-  margin: 110px 15% 10% 15%;
+  border: 3px solid #f51963;
+  margin: 110px 15% 7% 15%;
   border-radius: 12px;
 `;
 
@@ -113,7 +115,6 @@ const AsideDiv = styled.div`
 const Main = props => {
   return (
     <>
-      <Caro />
       <TopDiv>
         <Toph1>Webworx Development</Toph1>
       </TopDiv>

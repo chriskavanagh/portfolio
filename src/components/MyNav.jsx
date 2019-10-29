@@ -40,6 +40,7 @@ const StyledLink = styled(NavLink)`
   :hover,
   :active {
     color: #fa923f;
+    background: gray;
   }
 `;
 
