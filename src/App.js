@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./components/Home";
 import About from "./components/About";
+import Slideshow from "./components/Slideshow";
 import Contact from "./components/Contact";
 import TopNav from "./components/TopNav";
 import MyNav from "./components/MyNav";
@@ -16,7 +17,7 @@ function App() {
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/" component={Home} />
+        <Route path="/" component={Slideshow} />
       </Switch>
     </div>
   );

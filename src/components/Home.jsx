@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-// import Caro from "./Caro";
-//import Slideshow from "./Slideshow";
 import { Link } from "react-router-dom";
+import unsplash2 from "../unsplash-2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faTwitter,
   faInstagram,
@@ -56,6 +56,8 @@ const Toph1 = styled.h1`
   text-align: center;
   font-family: Oxygen;
   font-size: 4rem;
+  color: white;
+  z-index: 10000;
 `;
 
 const Styledli = styled.li`
@@ -71,7 +73,7 @@ const Styledul = styled.ul`
   padding: 0px;
 `;
 
-const TopDiv = styled.div`
+/* const TopDiv = styled.div`
   display: flex;
   align-items: center;
   background: gray;
@@ -81,7 +83,7 @@ const TopDiv = styled.div`
   border: 3px solid #f51963;
   margin: 110px 15% 7% 15%;
   border-radius: 12px;
-`;
+`; */
 
 const AsideDiv = styled.div`
   margin-top: 1.5em;
@@ -112,11 +114,53 @@ const AsideDiv = styled.div`
   }
 `;
 
+const TopDiv = styled.div`
+  background-image: url(${unsplash2});
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 750px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 6px solid black;
+  flex-direction: column;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: #000;
+    position: absolute;
+  }
+`;
+
+const MyP = styled.p`
+  display: block;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #c71585;
+  z-index: 10000;
+`;
+
+const MyP2 = styled.p`
+  display: block;
+  font-size: 20px;
+  color: #c71585;
+  z-index: 10000;
+  padding-top: 20px;
+`;
+
 const Main = props => {
   return (
     <>
       <TopDiv>
         <Toph1>Webworx Development</Toph1>
+        <MyP>3357 Kelly Ln Roanoke, VA 24018</MyP>
+        <MyP2>Website Design & Developent</MyP2>
+        <div class="overlay"></div>
       </TopDiv>
 
       <Styleddiv>

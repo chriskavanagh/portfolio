@@ -1,47 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useTransition, animated, config } from "react-spring";
 //import styled from "styled-components";
 import { Fade } from "react-slideshow-image";
+import unsplash1 from "../unsplach.jpg";
+import unsplash2 from "../unsplash-2.jpg";
+import unsplash3 from "../unsplash-3.jpg";
 
-const fadeImages = [
-  "https://images.unsplash.com/photo-1557958114-3d2440207108?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-  "https://images.unsplash.com/photo-1557939403-1760a0e47505?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1931&q=80",
-  "https://images.unsplash.com/photo-1558039719-79cb7b60d279?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+const slides = [
+  {
+    id: 0,
+    url: unsplash1
+  },
+  {
+    id: 1,
+    url: unsplash2
+  },
+  {
+    id: 2,
+    url: unsplash3
+  },
+  { id: 3, url: unsplash1 }
 ];
 
-const fadeProperties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: false,
-  indicators: true,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`fade transition from ${oldIndex} to ${newIndex}`);
-  }
-};
-
 const Slideshow = () => {
-  return (
-    <div className="slide-container">
-      <Fade {...fadeProperties}>
-        <div className="each-fade">
-          <div className="image-container">
-            <img src={fadeImages[0]} />
-          </div>
-          <h2>First Slide</h2>
-        </div>
-        <div className="each-fade">
-          <div className="image-container">
-            <img src={fadeImages[1]} />
-          </div>
-          <h2>Second Slide</h2>
-        </div>
-        <div className="each-fade">
-          <div className="image-container">
-            <img src={fadeImages[2]} />
-          </div>
-        </div>
-      </Fade>
-    </div>
+  const [index, set] = useState(0);
+  const transitions = useTransition(slides[index], item => item.id, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: config.gentle
+  });
+
+  useEffect(
+    () => void setInterval(() => set(state => (state + 1) % 4), 5000),
+    []
   );
+  return transitions.map(({ item, props, key }) => (
+    <animated.div
+      key={key}
+      class="bg"
+      style={{
+        ...props,
+        backgroundImage: `url(${item.url})`
+      }}
+    />
+  ));
 };
 
 export default Slideshow;

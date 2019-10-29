@@ -1,36 +1,42 @@
-.slide-container {
-  width: 90%;
-  margin: auto;
-}
-
-h3 {
-  text-align: center;
-}
-
-.each-slide > div {
-  display: flex;
-
+.bg {
+  width: 100vw;
+  height: 78.2vh;
   background-size: cover;
-  height: 300px;
+  background-position: center;
+  background-attachment: fixed;
+  will-change: opacity;
 }
 
-.each-slide span {
-  padding: 20px;
-  font-size: 20px;
-  background: #efefef;
-  text-align: center;
-}
-
-.each-fade {
+.carousel {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 750px;
+  max-width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 6px solid black;
+  flex-direction: column;
 }
 
-.each-fade .image-container {
-  width: 100%;
-  overflow: hidden;
+.splash1 {
+  background-image: url(./unsplach.jpg);
 }
 
-.each-fade .image-container img {
+.splash2 {
+  background-image: url(./unsplash-2.jpg);
+}
+
+.splash3 {
+  background-image: url(./unsplash-3.jpg);
+}
+
+.overlay {
   width: 100%;
-  height: 65%;
+  height: 100%;
+  opacity: 0.6;
+  background: #000;
+  position: absolute;
 }
