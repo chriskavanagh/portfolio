@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import unsplash2 from "../unsplash-2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faTwitter,
   faInstagram,
@@ -156,12 +155,12 @@ const MyP2 = styled.p`
 const Main = props => {
   return (
     <>
-      <TopDiv>
+      <div>
         <Toph1>Webworx Development</Toph1>
         <MyP>3357 Kelly Ln Roanoke, VA 24018</MyP>
         <MyP2>Website Design & Developent</MyP2>
-        <div class="overlay"></div>
-      </TopDiv>
+        <div className="overlay"></div>
+      </div>
 
       <Styleddiv>
         <div>
