@@ -28,7 +28,7 @@ const Slideshow = () => {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    config: config.gentle
+    config: config.default
   });
 
   useEffect(
