@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import TopNav from "./components/TopNav";
 import MyNav from "./components/MyNav";
 import { Route, Switch } from "react-router-dom";
+import CarosouelExample from "./components/Reveal";
 import "./App.css";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <MyNav />
 
       <Switch>
-        <Route path="/about" component={About} />
+        <Route path="/about" component={CarosouelExample} />
         <Route path="/contact" component={Contact} />
         <Route path="/" component={Slideshow} />
       </Switch>

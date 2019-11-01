@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 750px;
+  height: 763.5px;
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -16,9 +16,21 @@
 .overlay {
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.7;
   background: #000;
   position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .slideShow__h1 {
@@ -37,4 +49,19 @@
   font-size: 2rem;
   color: #f51963;
   font-family: "Times New Roman", Times, serif;
+}
+
+.slideShow__address {
+  border: 2px solid graY;
+  z-index: 10000;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
+}
+
+.revealImg {
+  width: 100vw;
+  height: 740px;
+  object-fit: cover;
 }
