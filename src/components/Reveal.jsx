@@ -31,18 +31,49 @@ const Container = styled.div`
   position: relative;
 `;
 
+const Arrow = styled.div`
+  text-shadow: 1px 1px 1px #fff;
+  color: #282c34;
+  z-index: 100;
+  line-height: 12;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+  font-size: 3em;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  ${props =>
+    props.right
+      ? css`
+          left: 90%;
+        `
+      : css`
+          left: 0%;
+        `}
+`;
+
+const handleClick = () => {
+  console.log("Next/Previous");
+};
+
 const CarosouelExample = () => {
-  const CarouselUI = ({ children }) => <Container>{children}</Container>;
+  const CarouselUI = ({ position, handleClick, children }) => (
+    <Container>
+      {children}
+      <Arrow onClick={handleClick} data-position={position - 1}>
+        {"<"}
+      </Arrow>
+      <Arrow right onClick={handleClick} data-position={position + 1}>
+        {">"}
+      </Arrow>
+    </Container>
+  );
   const Carousel = makeCarousel(CarouselUI);
-  const [index, setindex] = useState(0);
-  /* useEffect(
-    // modulus will give the index back until last index gives 0
-    () => void setInterval(() => setindex(index => (index + 1) % 3), 5000),
-    []
-  ); */
 
   return (
-    <Carousel defaultWait={12000} maxTurns={500}>
+    <Carousel defaultWait={7000} maxTurns={5}>
       <Slide right>
         <div>
           <RevealImg url={slides[1].url} />;
