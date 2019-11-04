@@ -9,6 +9,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@types/react-transition-group": "^4.2.3",
+    "material-design-icons": "^3.0.1",
+    "material-icons-react": "^1.0.4",
     "react": "^16.10.2",
     "react-crossfade-image": "^1.1.1",
     "react-dom": "^16.10.2",
