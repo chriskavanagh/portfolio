@@ -5,8 +5,7 @@ import Slideshow from "./Slideshow";
 
 const Containerdiv = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 5rem;
+  grid-template-columns: 200px 1fr 1fr 200px;
   margin: 0 auto 5rem auto;
 
   p {
@@ -28,13 +27,15 @@ const Containerdiv = styled.div`
     font-size: 28px;
     text-decoration: underline;
     color: #000080;
+    margin: 0 0 40px 0;
   }
 `;
 
-const Text = () => {
+const Text = props => {
   return (
     <>
-      <Containerdiv style={{ marginTop: "32rem" }}>
+      <Containerdiv style={{ marginTop: "29rem" }}>
+        <div></div>
         <div>
           <h2>Services</h2>
           <p>
@@ -65,6 +66,7 @@ const Text = () => {
             distinctio!
           </p>
         </div>
+        <div></div>
       </Containerdiv>
     </>
   );
