@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const Styleddiv = styled.div`
   position: sticky;
-  top: 0;
+  top: 0px;
+  z-index: 2000;
   background: #282c34;
   padding: 1rem;
   display: flex;

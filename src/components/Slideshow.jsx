@@ -5,6 +5,7 @@ import { useTransition, animated, config } from "react-spring";
 import unsplash1 from "../unsplach.jpg";
 import unsplash2 from "../unsplash-2.jpg";
 import unsplash3 from "../unsplash-3.jpg";
+import Text from "./Text";
 
 const slides = [
   {
@@ -26,13 +27,11 @@ const Slideshow = () => {
   const transitions = useTransition(slides[index], item => item.id, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 }
+    leave: { opacity: 0 },
+    config: config.stiff
   });
 
-  useEffect(
-    () => void setInterval(() => set(index => (index + 1) % 3), 17000),
-    []
-  );
+  useEffect(() => setInterval(() => set(index => (index + 1) % 3), 7000), []);
   return transitions.map(({ item, props, key }) => (
     <animated.div
       key={key}

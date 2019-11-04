@@ -6,6 +6,7 @@ import unsplash1 from "../unsplach.jpg";
 import unsplash2 from "../unsplash-2.jpg";
 import unsplash3 from "../unsplash-3.jpg";
 import RevealImg from "./RevealImg";
+import Text from "./Text";
 
 const slides = [
   {
@@ -24,10 +25,7 @@ const slides = [
 
 const Container = styled.div`
   width: 100%;
-  height: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 70vh;
   position: relative;
 `;
 
@@ -35,7 +33,7 @@ const Arrow = styled.div`
   text-shadow: 1px 1px 1px #fff;
   color: #282c34;
   z-index: 100;
-  line-height: 12;
+  line-height: 14;
   text-align: center;
   position: absolute;
   top: 0;
@@ -58,7 +56,8 @@ const handleClick = () => {
   console.log("Next/Previous");
 };
 
-const CarosouelExample = () => {
+const CarosouelExample = props => {
+  console.log(props);
   const CarouselUI = ({ position, handleClick, children }) => (
     <Container>
       {children}
@@ -73,18 +72,22 @@ const CarosouelExample = () => {
   const Carousel = makeCarousel(CarouselUI);
 
   return (
-    <Carousel defaultWait={7000} maxTurns={5}>
-      <Slide right>
-        <div>
-          <RevealImg url={slides[1].url} />;
-        </div>
-      </Slide>
-      <Slide right>
-        <div>
-          <RevealImg url={slides[2].url} />;
-        </div>
-      </Slide>
-    </Carousel>
+    <div style={{ position: "static" }}>
+      <Carousel defaultWait={6000} maxTurns={2}>
+        <Slide right>
+          <div>
+            <RevealImg url={slides[1].url} />;
+          </div>
+        </Slide>
+        <Slide right>
+          <div>
+            <RevealImg url={slides[2].url} />;
+          </div>
+        </Slide>
+      </Carousel>
+
+      <Text />
+    </div>
   );
 };
 
