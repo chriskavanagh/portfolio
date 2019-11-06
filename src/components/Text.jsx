@@ -1,12 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Slideshow from "./Slideshow";
+import Card from "./Card";
 //import CarosouelExample from "./Reveal";
 
 const Containerdiv = styled.div`
   display: grid;
   grid-template-columns: 200px 1fr 1fr 200px;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 0rem auto;
+  background: #e6e6e6;
+  padding: 50px 0 30px 0;
+  border-bottom: 10px solid #580000;
+  border-top: 10px solid #580000;
 
   p {
     margin: 15px auto;
@@ -18,15 +23,16 @@ const Containerdiv = styled.div`
   }
 
   div {
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
   }
 
   h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 38px;
     text-decoration: underline;
-    color: #000080;
+    color: #580000;
+    font-weight: bold;
     margin: 0 0 40px 0;
   }
 `;
@@ -68,6 +74,7 @@ const Text = props => {
         </div>
         <div></div>
       </Containerdiv>
+      <Card />
     </>
   );
 };
